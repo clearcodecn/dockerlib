@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql:
+    container_name: mysql
+    image:mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD: example
+      - MYSQL_DATABASE: db 
+    volumes:
+      - ./mysqldb/:/var/lib/mysql 
+    ports:
+      - 33060:3306
